@@ -1,0 +1,99 @@
+/* Generic styles */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+​ h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+​ ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Main Styles */
+
+body {
+  background-color: mistyrose;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.ball {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: orange;
+  animation-name: ball-animation;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+.shadow {
+  height: 10px;
+  width: 80px;
+  background-color: rgb(94, 94, 94);
+  border-radius: 80%;
+  position: absolute;
+  bottom: 175px;
+  animation-name: shadow-animation;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+@keyframes ball-animation {
+  0% {
+    transform: translateY(-250px);
+  }
+
+  70% {
+    height: 100px;
+    width: 60px;
+  }
+
+  95% {
+    width: 80px;
+    height: 80px;
+  }
+
+  100% {
+    transform: translateY(200px);
+    height: 70px;
+    width: 110px;
+  }
+}
+
+@keyframes shadow-animation {
+  0% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    /* width: 75px; */
+    transform: scale(0.1);
+  }
+}
